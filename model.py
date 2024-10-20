@@ -20,7 +20,7 @@ def build_model(window_size=10):
     return model
 
 def preprocess_data(fruit_type, window_size=10):
-    df = pd.read_csv('C:\\Users\\chint\\sih project\\dataset\\kalimati_tarkari_dataset.csv')
+    df = pd.read_csv('dataset/kalimati_tarkari_dataset.csv')
     df = df[df['Commodity'] == fruit_type]
     df['Date'] = pd.to_datetime(df['Date'])
     df.set_index('Date', inplace=True)
